@@ -1,5 +1,5 @@
 # Explicitly configured $PATH variable
-PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+#PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
@@ -9,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="xiong-chiamiov-plus"
-ZSH_THEME="robbyrussell"
+ZSH_THEME=amuse
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -27,8 +27,8 @@ ZSH_THEME="robbyrussell"
 COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx zsh-syntax-highlighting brew repo sudo knife vagrant bundler web-search)
+# Example format: plugins=(textmate vi-mode)
+plugins=(common-aliases git python sudo urltools web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -53,13 +53,6 @@ alias gk='gitk --all&'
 alias gx='gitx --all'
 alias got='git '
 alias get='git '
-
-## Vagrant Aliases
-alias vag='vagrant'
-alias vagup='vagrant up'
-alias vagdestroy='vagrant destroy'
-alias vagssh='vagrant ssh'
-alias vaghalt='vagrant halt'
 
 ## Miscellaneous Aliases
 alias htop='sudo htop'
