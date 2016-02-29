@@ -1,0 +1,17 @@
+#!/bin/bash
+
+export PATH="$PATH":/home/henrikq/depot_tools
+export GYP_DEFINES="component=shared_library" 
+export BUILD_TOOLCHAIN_SYSROOTS="/home/henrikq/sysroot"
+export BUILD_FLAGS="--no-pkg"
+export CHROMIUM_BUILDTOOLS_PATH="/home/henrikq/work/chromium/src/buildtools"
+export OPERA_DEV_FLAGS="--show-component-extension-with-background-pages --show-component-extension-options --disable-update --webui-debug-mode"
+
+alias rundev="~/work/chromium/src/out/Release/opera-developer $OPERA_DEV_FLAGS"
+alias builddev="time ~/work/desktop/infra_build.py --target opera $BUILD_FLAGS"
+alias builddevop="time ~/work/desktop/infra_build.py --target opera opautolib $BUILD_FLAGS"
+alias quickbuilddev="time ninja -k0 -C ~/work/chromium/src/out/Release opera xdisplaycheck"
+alias quickbuilddev="time ninja -k0 -C ~/work/chromium/src/out/Release opera xdisplaycheck"
+#alias pakdev="time ~/work/desktop/infra_build.py --target opera_pak $BUILD_FLAGS"
+alias pakdev="time ninja -k0 -C ~/work/chromium/src/out/Release opera_pak xdisplaycheck"
+

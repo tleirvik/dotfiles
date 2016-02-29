@@ -1,37 +1,39 @@
+#!/bin/bash
 ##############################################################################
-#   Filename: .bashrc                                                        #
-# Maintainer: Michael J. Smalley <michaeljsmalley@gmail.com>                 #
-#        URL: http://github.com/michaeljsmalley/dotfiles                     #
-#                                                                            #
-#                                                                            #
-# Sections:                                                                  #
-#   01. General ................. General Bash behavior                      #
-#   02. Aliases ................. Aliases                                    #
-#   03. Theme/Colors ............ Colors, prompts, fonts, etc.               #
+#   Filename: .bashrc
+#
+# Sections:
+#   01. Enviorment Variables 
+#   02. Aliases
+#   03. Other scripts
 ##############################################################################
 
 ##############################################################################
-# 01. General                                                                #
+# 01. Enviorment Variables 
 ##############################################################################
 # Shell prompt
-export PS1="\n\[\e[0;36m\]┌─[\[\e[0m\]\[\e[1;33m\]\u\[\e[0m\]\[\e[1;36m\] @ \[\e[0m\]\[\e[1;33m\]\h\[\e[0m\]\[\e[0;36m\]]─[\[\e[0m\]\[\e[1;34m\]\w\[\e[0m\]\[\e[0;36m\]]\[\e[0;36m\]─[\[\e[0m\]\[\e[0;31m\]\t\[\e[0m\]\[\e[0;36m\]]\[\e[0m\]\n\[\e[0;36m\]└─[\[\e[0m\]\[\e[1;37m\]\$\[\e[0m\]\[\e[0;36m\]]› \[\e[0m\]"
+CB="\e[0;34m" # color blue
+CS="\e[m" # color stop
+export PS1="$CB\w$CS \$ "
 
-# If fortune is installed, run a fortune
-if [ -e /opt/local/bin/fortune ]; then
-    fortune -so
-    echo " "
-fi
+export PATH="~/bin:$PATH"
+export PATH="/usr/lib/ccache:$PATH"
 
 ##############################################################################
 # 02. Aliases                                                                #
 ##############################################################################
 # Enable colors in "ls" command output
-alias ls="ls -Glah"
+alias ls="ls --color"
+alias default-prompt="export PS1='$PS1'"
+alias simple-prompt="export PS1='\$ '"
+
+# git
+alias gitlog="git log --decorate --oneline --left-right -n 20"
+alias ggrep="git grep -C2 -n --heading --show-function"
 
 ##############################################################################
-# 03. Theme/Colors                                                           #
+# 03. Other Scripts 
 ##############################################################################
-# CLI Colors
-export CLICOLOR=1
-# Set "ls" colors
-export LSCOLORS=Gxfxcxdxbxegedabagacad
+if [ -f $HOME/.opera ]; then
+    source $HOME/.opera
+fi
