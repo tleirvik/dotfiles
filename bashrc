@@ -22,14 +22,15 @@ export PATH="/usr/lib/ccache:$PATH"
 ##############################################################################
 # 02. Aliases                                                                #
 ##############################################################################
-# Enable colors in "ls" command output
 alias ls="ls --color"
 alias default-prompt="export PS1='$PS1'"
 alias simple-prompt="export PS1='\$ '"
+alias grep='grep --color'
 
 # git
-alias gitlog="git log --decorate --oneline --left-right -n 20"
-alias ggrep="git grep -C2 -n --heading --show-function"
+alias gs="git status"
+alias gl="git log --decorate --oneline --left-right -n 20"
+alias gg="git grep -C2 -n --heading --show-function"
 
 ##############################################################################
 # 03. Other Scripts 
