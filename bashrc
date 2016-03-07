@@ -12,9 +12,9 @@
 # 01. Enviorment Variables 
 ##############################################################################
 # Shell prompt
-CB="\e[0;34m" # color blue
+CLB="\e[1;34m" # color blue
 CS="\e[m" # color stop
-export PS1="$CB\w$CS \$ "
+export PS1="$CLB\w$CS \$ "
 
 export PATH="~/bin:$PATH"
 export PATH="/usr/lib/ccache:$PATH"
@@ -23,6 +23,8 @@ export PATH="/usr/lib/ccache:$PATH"
 # 02. Aliases                                                                #
 ##############################################################################
 alias ls="ls --color"
+alias ll="ls -l"
+alias ff="find . -name"
 alias default-prompt="export PS1='$PS1'"
 alias simple-prompt="export PS1='\$ '"
 alias grep='grep --color'
