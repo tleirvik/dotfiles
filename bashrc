@@ -12,8 +12,8 @@
 # 01. Enviorment Variables 
 ##############################################################################
 # Shell prompt
-CLB="\e[1;34m" # color blue
-CS="\e[m" # color stop
+CLB="\[\e[1;34m\]" # color light blue
+CS="\[\e[m\]" # color stop
 export PS1="$CLB\w$CS \$ "
 
 export PATH="~/bin:$PATH"
@@ -31,6 +31,7 @@ alias grep='grep --color'
 
 # git
 alias gs="git status"
+alias gb="git branch"
 alias gl="git log --decorate --oneline --left-right -n 20"
 alias gg="git grep -C2 -n --heading --show-function"
 
