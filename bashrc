@@ -28,6 +28,10 @@ alias ff="find . -name"
 alias default-prompt="export PS1='$PS1'"
 alias simple-prompt="export PS1='\$ '"
 alias grep='grep --color'
+alias nm='wicd-curses' # network manager
+alias am='alsamixer'
+alias pc='pavucontrol' # pulseaudio controll
+alias mm='arandr' # monitor manager
 
 # git
 alias gs="git status"
