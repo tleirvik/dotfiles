@@ -5,6 +5,10 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# misc
+#bindsym Control+Mod1+l exec --no-startup-id i3exit lock, mode "default"
+bindsym Control+Mod1+l exec "i3lock -c fffff"
+
 # audio
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute 0 false; pactl set-sink-volume 0 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 0 false; pactl set-sink-volume 0 -5%"
