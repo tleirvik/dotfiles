@@ -16,3 +16,4 @@ alias pakdev="ninja -k0 -C ~/work/chromium/src/out/Release opera_pak xdisplayche
 #alias pakdev="time ~/work/desktop/infra_build.py --target opera_pak $BUILD_FLAG"
 alias icemon="USE_SCHEDULER=henrikq-2.users.oslo.osa icemon -n oslo"
 
+alias opc="op c"
