@@ -38,6 +38,7 @@ ethernet _first_ {
 battery 0 {
         format = "B0:%status %percentage %remaining"
         status_chr = " 🔌 "
+        status_full = ""
         status_bat = ""
         low_threshold = 30
         path = "/sys/class/power_supply/BAT0/uevent"
@@ -47,6 +48,7 @@ battery 1 {
         format = "B1:%status %percentage %remaining"
         status_bat = ""
         status_chr = " 🔌 "
+        status_full = ""
         low_threshold = 30
         path = "/sys/class/power_supply/BAT1/uevent"
 }
@@ -70,6 +72,7 @@ cpu_temperature 0 {
 
 load {
         format = "L: %1min"
+        max_threshold = 4
 }
 
 volume master {

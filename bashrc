@@ -32,6 +32,9 @@ alias nm='wicd-curses' # network manager
 alias am='alsamixer'
 alias pc='pavucontrol' # pulseaudio controll
 alias mm='arandr' # monitor manager
+alias nosleep='caffeinate time cat'
+alias python='python3'
+yr () { curl "wttr.in/$@"; }
 
 # git
 alias gs="git status"
