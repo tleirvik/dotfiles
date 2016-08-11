@@ -42,6 +42,10 @@ alias gb="git branch"
 alias gl="git log --decorate --oneline --left-right -n 20"
 alias gg="git grep -C2 -n --heading --show-function"
 
+# misc
+alias rmorig='for file in $(find . -name "*.orig"); do rm $file; done;'
+alias open='xdg-open $@ &> /dev/null'
+
 ##############################################################################
 # 03. Other Scripts 
 ##############################################################################
