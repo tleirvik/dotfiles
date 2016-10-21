@@ -40,11 +40,13 @@ yr () { curl "wttr.in/$@"; }
 alias gs="git status"
 alias gb="git branch"
 alias gl="git log --decorate --oneline --left-right -n 20"
-alias gg="git grep -C2 -n --heading --show-function"
+alias gg='git grep -n'
+alias ggg="git grep -C2 -n --heading --show-function"
 
 # misc
 alias rmorig='for file in $(find . -name "*.orig"); do rm $file; done;'
 alias open='xdg-open $@ &> /dev/null'
+alias simple='python2 -m SimpleHTTPServer 3000'
 
 ##############################################################################
 # 03. Other Scripts 
