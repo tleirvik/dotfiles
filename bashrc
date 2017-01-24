@@ -19,6 +19,9 @@ export PS1="$CLB\w$CS \$ "
 export PATH="~/bin:$PATH"
 export PATH="/usr/lib/ccache:$PATH"
 
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 ##############################################################################
 # 02. Aliases                                                                #
 ##############################################################################
