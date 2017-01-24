@@ -60,8 +60,8 @@ alias config-java='sudo update-alternatives --config java'
 alias config-javac='sudo update-alternatives --config javac'
 
 ##############################################################################
-# 03. Other Scripts 
+# 03. Local stuff
 ##############################################################################
-if [ -f $HOME/.opera ]; then
-    source $HOME/.opera
+if [ -f $HOME/.bashrc_local ]; then
+    source $HOME/.bashrc_local
 fi
