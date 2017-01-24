@@ -22,6 +22,9 @@ export PATH="/usr/lib/ccache:$PATH"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+if [ -f $HOME/.npm-global ]; then
+    export PATH="$HOME/.npm-global/bin:$PATH"
+fi
 ##############################################################################
 # 02. Aliases                                                                #
 ##############################################################################
