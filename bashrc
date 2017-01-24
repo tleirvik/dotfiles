@@ -35,6 +35,7 @@ alias default-prompt="export PS1='$PS1'"
 alias simple-prompt="export PS1='\$ '"
 alias grep='grep --color'
 alias nm='wicd-curses' # network manager
+alias refresh-wifi='sudo iwlist wlp4s0 scan'
 alias am='alsamixer'
 alias pc='pavucontrol' # pulseaudio controll
 alias mm='arandr' # monitor manager
@@ -53,6 +54,10 @@ alias ggg="git grep -C2 -n --heading --show-function"
 alias rmorig='for file in $(find . -name "*.orig"); do rm $file; done;'
 alias open='xdg-open $@ &> /dev/null'
 alias simple='python2 -m SimpleHTTPServer 3000'
+alias octave='octave-cli'
+
+alias config-java='sudo update-alternatives --config java'
+alias config-javac='sudo update-alternatives --config javac'
 
 ##############################################################################
 # 03. Other Scripts 
